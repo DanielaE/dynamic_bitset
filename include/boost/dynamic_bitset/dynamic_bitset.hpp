@@ -1027,7 +1027,7 @@ bool dynamic_bitset<Block, Allocator>::all() const
     }
 
     const block_width_type extra_bits = count_extra_bits();
-    block_type const all_ones = ~static_cast<Block>(0);
+    block_type const all_ones = static_cast<Block>(~0);
 
     if (extra_bits == 0) {
         for (size_type i = 0, e = num_blocks(); i < e; ++i) {
