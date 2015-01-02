@@ -40,6 +40,7 @@ inline bool nth_bit(Block num, std::size_t n)
 #else
   int block_width = std::numeric_limits<Block>::digits;
 #endif
+  (void)block_width;
 
   assert(n < (std::size_t) block_width);
   return (num >> n) & 1;
