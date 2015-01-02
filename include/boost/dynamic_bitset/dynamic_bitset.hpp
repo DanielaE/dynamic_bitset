@@ -85,7 +85,7 @@ public:
 
 
         // the one and only non-copy ctor
-        reference(block_type & b, block_type pos)
+        reference(block_type & b, block_width_type pos)
             :m_block(b),
              m_mask( (assert(pos < bits_per_block),
                       block_type(1) << pos )
