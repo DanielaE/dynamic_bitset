@@ -20,6 +20,10 @@
 
 #include "boost/detail/workaround.hpp"
 
+#if defined(BOOST_MSVC)
+# pragma warning(disable: 4309) // static_cast truncates constant value
+#endif
+
 #if !defined(BOOST_NO_CXX11_ALLOCATOR)
 #include <cstdlib>
 
